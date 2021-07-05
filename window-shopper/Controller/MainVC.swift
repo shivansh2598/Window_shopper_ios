@@ -35,12 +35,15 @@ class MainVC: UIViewController {
     {
         if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {
             if let wage = Double(wageTxt), let price = Double(priceTxt) {
-                let hours : Int = Wage.getHours(forWage: wage, andPrice: price)
                 
-                view.endEditing(true)
-                numberLbl.isHidden = false
-                hourLbl.isHidden = false
-                numberLbl.text = "\(hours)"
+                if(wage != 0){
+                    let hours : Int = Wage.getHours(forWage: wage, andPrice: price)
+                    
+                    view.endEditing(true)
+                    numberLbl.isHidden = false
+                    hourLbl.isHidden = false
+                    numberLbl.text = "\(hours)"
+                }
             }
         }
     }
