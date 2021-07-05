@@ -9,7 +9,7 @@ import UIKit
 
 class MainVC: UIViewController {
 
-    @IBOutlet weak var wageTxt: CurrencyTextField!
+    @IBOutlet weak var wageTxt: CurrencyTextField!      //Weak is used to avoid memory leakage
     @IBOutlet weak var priceTxt: CurrencyTextField!
     
     @IBOutlet weak var numberLbl: UILabel!
@@ -22,18 +22,18 @@ class MainVC: UIViewController {
         calcBtn.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         calcBtn.setTitle("Calculate", for: .normal)
         calcBtn.setTitleColor(UIColor.white, for: .normal)
-        calcBtn.addTarget(self, action : #selector(MainVC.calculate), for : .touchUpInside)
+        calcBtn.addTarget(self, action : #selector(MainVC.calculate), for : .touchUpInside) //used to implement onclick feature of a button
         
-        wageTxt.inputAccessoryView = calcBtn
+        wageTxt.inputAccessoryView = calcBtn        //used to automatically place buttons on top of the keypad
         priceTxt.inputAccessoryView = calcBtn
         
         numberLbl.isHidden = true
         hourLbl.isHidden = true
     }
 
-    @objc func calculate()
+    @objc func calculate()      //@objc is necessary for all the code part of obj-C
     {
-        if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {
+        if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {       //using optional binding
             if let wage = Double(wageTxt), let price = Double(priceTxt) {
                 
                 if(wage != 0){
