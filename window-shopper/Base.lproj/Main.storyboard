@@ -35,30 +35,65 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPD-o7-ZBv" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="20" y="281" width="374" height="40"/>
+                                <rect key="frame" x="20" y="255" width="374" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGQ-dL-Wb2">
+                                <rect key="frame" x="20" y="345" width="374" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z9-iP-quv">
+                                <rect key="frame" x="182.33333333333334" y="409" width="49.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-pj-0S2">
+                                <rect key="frame" x="20" y="670" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="zrz-P4-KVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalcTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7a-PC-O9L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uPD-o7-ZBv" firstAttribute="top" secondItem="ubG-kS-q6O" secondAttribute="bottom" constant="51" id="6L9-hX-8cy"/>
+                            <constraint firstItem="fPg-pj-0S2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4fd-R6-CXW"/>
+                            <constraint firstItem="uPD-o7-ZBv" firstAttribute="top" secondItem="ubG-kS-q6O" secondAttribute="bottom" constant="25" id="6L9-hX-8cy"/>
                             <constraint firstItem="g6h-6q-TdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7pt-5q-MXg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPg-pj-0S2" secondAttribute="trailing" constant="20" id="9Ac-ue-Bcu"/>
                             <constraint firstItem="Qyc-wb-TfN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BHO-np-JP1"/>
                             <constraint firstItem="ubG-kS-q6O" firstAttribute="top" secondItem="g6h-6q-TdR" secondAttribute="bottom" constant="50" id="Ct6-Pj-MV3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fPg-pj-0S2" secondAttribute="bottom" constant="30" id="DFW-oK-M1u"/>
                             <constraint firstItem="Qyc-wb-TfN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QtL-v4-agf"/>
                             <constraint firstItem="uPD-o7-ZBv" firstAttribute="leading" secondItem="ubG-kS-q6O" secondAttribute="leading" id="SEx-wf-0fz"/>
                             <constraint firstItem="uPD-o7-ZBv" firstAttribute="trailing" secondItem="ubG-kS-q6O" secondAttribute="trailing" id="TgF-iE-JPX"/>
                             <constraint firstItem="Qyc-wb-TfN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wxd-sX-x3S"/>
                             <constraint firstItem="ubG-kS-q6O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XPf-19-v7c"/>
+                            <constraint firstItem="kGQ-dL-Wb2" firstAttribute="trailing" secondItem="uPD-o7-ZBv" secondAttribute="trailing" id="aKL-oj-jPH"/>
+                            <constraint firstItem="kGQ-dL-Wb2" firstAttribute="leading" secondItem="uPD-o7-ZBv" secondAttribute="leading" id="axR-Lt-r0F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubG-kS-q6O" secondAttribute="trailing" constant="20" id="bZU-ZI-hgq"/>
+                            <constraint firstItem="4z9-iP-quv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hZN-hY-fsA"/>
+                            <constraint firstItem="4z9-iP-quv" firstAttribute="top" secondItem="kGQ-dL-Wb2" secondAttribute="bottom" constant="10" id="kV3-VY-vsm"/>
                             <constraint firstItem="Qyc-wb-TfN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lV0-JC-Uzi"/>
                             <constraint firstItem="g6h-6q-TdR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="mPS-nR-phZ"/>
                             <constraint firstItem="uPD-o7-ZBv" firstAttribute="height" secondItem="ubG-kS-q6O" secondAttribute="height" id="uRa-J8-q0P"/>
+                            <constraint firstItem="kGQ-dL-Wb2" firstAttribute="top" secondItem="uPD-o7-ZBv" secondAttribute="bottom" constant="50" id="x6B-5v-quh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hourLbl" destination="4z9-iP-quv" id="4YT-2b-xXR"/>
+                        <outlet property="numberLbl" destination="kGQ-dL-Wb2" id="kSy-Ya-YuX"/>
                         <outlet property="priceTxt" destination="uPD-o7-ZBv" id="WAT-4u-T8g"/>
                         <outlet property="wageTxt" destination="ubG-kS-q6O" id="n9T-2l-ask"/>
                     </connections>
